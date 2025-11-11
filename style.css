@@ -1,0 +1,90 @@
+body {
+  background-color: #fdf6ec;
+  color: #3b2f2f;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #fae8d1 !important;
+}
+
+.navbar-brand {
+  color: #3b2f2f !important;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.cart-btn {
+  background-color: #f5d6b4;
+  border: none;
+  color: #3b2f2f;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 6px 14px;
+}
+
+.cart-btn:hover {
+  background-color: #f4c38a;
+}
+
+/* Alert */
+.custom-alert {
+  background-color: #e7efff;
+  color: #3b2f2f;
+  border: none;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+/* Product Section */
+.product-card {
+  background-color: #fdeedc;
+  border: 1px solid #f3dcb2;
+  border-radius: 14px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(59, 47, 47, 0.15);
+}
+
+.card-title {
+  font-weight: 600;
+  color: #3b2f2f;
+}
+
+.card-text {
+  color: #5b4a4a;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #51b8f9 !important;
+  border: none;
+  font-weight: 600;
+  border-radius: 8px;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #3aa3e8 !important;
+}
+
+/* Offcanvas */
+.offcanvas {
+  background-color: #fdf6ec;
+  color: #3b2f2f;
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid #f1d9b2;
+}
+
+/* List group in cart */
+.list-group-item {
+  background-color: #fdf6ec;
+  border-color: #f1d9b2;
+  color: #3b2f2f;
+}
