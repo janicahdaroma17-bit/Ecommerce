@@ -1,90 +1,171 @@
+/* 🌌 Night Sky Background */
 body {
-  background-color: #fdf6ec;
-  color: #3b2f2f;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at bottom, #001040 0%, #000000 100%);
+  overflow-x: hidden;
+  color: #e0faff;
   font-family: 'Inter', sans-serif;
+  position: relative;
 }
 
-/* Navbar */
+/* ✨ Twinkling Cyan Stars */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: transparent;
+  background-image: 
+    radial-gradient(3px 3px at 20px 30px, #00ffff, transparent),
+    radial-gradient(3px 3px at 100px 80px, #00ffff, transparent),
+    radial-gradient(2px 2px at 250px 120px, #00ffff, transparent),
+    radial-gradient(3px 3px at 350px 200px, #00ffff, transparent),
+    radial-gradient(2px 2px at 500px 400px, #00ffff, transparent),
+    radial-gradient(3px 3px at 700px 600px, #00ffff, transparent),
+    radial-gradient(2px 2px at 900px 500px, #00ffff, transparent),
+    radial-gradient(3px 3px at 1200px 300px, #00ffff, transparent),
+    radial-gradient(2px 2px at 1400px 700px, #00ffff, transparent),
+    radial-gradient(2px 2px at 1600px 100px, #00ffff, transparent);
+  animation: shimmer 15s linear infinite, twinkle 2s infinite alternate;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+/* 🌠 Animations */
+@keyframes shimmer {
+  0% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-50px) translateX(-50px); }
+  100% { transform: translateY(0) translateX(0); }
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.7; }
+  50% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+/* 🌙 Navbar */
 .navbar {
-  background-color: #fae8d1 !important;
+  background-color: #001040 !important;
+  border-bottom: 2px solid #000040;
+  padding: 0.5rem 1rem;
 }
 
 .navbar-brand {
-  color: #3b2f2f !important;
+  color: #ffffff !important;
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
+/* 🛒 Cart Button */
 .cart-btn {
-  background-color: #f5d6b4;
-  border: none;
-  color: #3b2f2f;
+  background-color: #001040;
+  border: 2px solid #000040;
+  color: #ffffff;
   font-weight: 600;
   border-radius: 8px;
   padding: 6px 14px;
+  transition: 0.3s ease;
 }
 
 .cart-btn:hover {
-  background-color: #f4c38a;
+  background-color: #004080;
+  border-color: #00ffff;
+  color: #ffffff;
 }
 
-/* Alert */
+/* 🔔 Alert */
 .custom-alert {
-  background-color: #e7efff;
-  color: #3b2f2f;
-  border: none;
+  background-color: rgba(0, 144, 192, 0.15);
+  color: #00ffff;
+  border: 1px solid #00ffff;
   border-radius: 12px;
   font-weight: 500;
 }
 
-/* Product Section */
-.product-card {
-  background-color: #fdeedc;
-  border: 1px solid #f3dcb2;
+/* 🧥 Product Cards */
+.product-card, .card {
+  background: linear-gradient(145deg, #001040, #004080);
+  border: 1px solid #00ffff33;
   border-radius: 14px;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
+  color: #e0faff;
 }
 
-.product-card:hover {
+.product-card:hover, .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(59, 47, 47, 0.15);
+  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.4);
 }
 
+/* 🖼️ Image Box Background */
+.card-img-top {
+  background-color: #a8f6ff33;
+  border-radius: 14px 14px 0 0;
+  object-fit: cover;
+  height: 280px;
+  display: block;
+  width: 100%;
+}
+
+/* 🖊️ Text Box */
+.card-body {
+  position: relative;
+  background-color: rgba(0, 16, 64, 0.6);
+  border-radius: 0 0 14px 14px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card Text */
 .card-title {
-  font-weight: 600;
-  color: #3b2f2f;
+  font-weight: 700;
+  color: #00ffff;
 }
 
 .card-text {
-  color: #5b4a4a;
+  color: #a8f6ff;
 }
 
-/* Buttons */
+/* 💰 Price Styling */
+.card-text.fw-bold {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* 💎 Buttons */
 .btn-primary {
-  background-color: #51b8f9 !important;
+  background-color: #0090c0 !important;
   border: none;
   font-weight: 600;
   border-radius: 8px;
   color: white;
+  transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #3aa3e8 !important;
+  background-color: #00ffff !important;
 }
 
-/* Offcanvas */
+/* 🛍️ Offcanvas Cart */
 .offcanvas {
-  background-color: #fdf6ec;
-  color: #3b2f2f;
+  background-color: #001040;
+  color: #e0faff;
 }
 
 .offcanvas-header {
-  border-bottom: 1px solid #f1d9b2;
+  border-bottom: 1px solid #00ffff33;
 }
 
-/* List group in cart */
 .list-group-item {
-  background-color: #fdf6ec;
-  border-color: #f1d9b2;
-  color: #3b2f2f;
+  background-color: transparent;
+  border-color: #00ffff33;
+  color: #e0faff;
 }

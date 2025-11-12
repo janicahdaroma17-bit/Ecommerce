@@ -23,7 +23,7 @@ app.post('/checkout', (req, res) => {
 
     console.log(`\n--- RECEIVED NEW ORDER (${newOrderId}) ---`);
     console.log(`Customer: ${orderData.customer.name}`);
-    console.log(`Total: $${orderData.total.toFixed(2)}`);
+    console.log(`Total: ₱${orderData.total.toFixed(2)}`);
     console.log(`Items Count: ${orderData.items.length}`);
     console.log('-------------------------------------\n');
 
